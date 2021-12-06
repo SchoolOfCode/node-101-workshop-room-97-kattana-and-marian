@@ -17,7 +17,20 @@ let myCollection = [
   ];
 
 
-  function describeItem (item) {
+  function describeItem (array) {
+  array.forEach(element => {
+      if (element.count === 1){
+        console.log(`I have a ${element.name}. Here's what I like about it: ${element.whatILike}`)
+    }
+    if (element.count > 1){
+        console.log(`I have a ${element.count} ${element.name}s. Here's what I like about it: ${element.whatILike}`)
+    }
+  })
+};
+  describeItem(myCollection)
+
+
+  /* {
     if (item === "School of Code mug"){
         console.log(`I have a ${myCollection[0].name}. Here's what I like about it: ${myCollection[0].whatILike}`)
     }
@@ -26,7 +39,5 @@ let myCollection = [
     }
     if (item === "School of Code pillow"){
         console.log(`I have a ${myCollection[2].name}. Here's what I like about it: ${myCollection[2].whatILike}`)
-    }
-  }
-  describeItem("School of Code pillow")
-
+    } 
+  describeItem("School of Code pillow") */
